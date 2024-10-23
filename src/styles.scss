@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-$primary: #f55863;
-$secondary: #26bfc5;
+$primary: #f84551;
+$secondary: #0ea5b0;
 $btn-color: #fff;
 
 
@@ -38,8 +38,4 @@ body {
     // background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     //     url(./../public/img/obrazWejściowy.jpg);
     //background-image: rgba($color: #fff, $alpha: .5), ;
-}
-
-.btn-secondary {
-    background: linear-gradient(0deg, #26c0c5 80%, #38c0c5 100%) !important;
 }
