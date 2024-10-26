@@ -1,5 +1,9 @@
 <app-logo />
 <input [(ngModel)]="userEmail" type="text" class="form-control rounded-4" placeholder="User's email">
 <input [(ngModel)]="userPassword" type="password" class="form-control rounded-4 mt-2" placeholder="User's password">
-<button (click)="loginUser()" class="btn btn-primary rounded-pill mt-3">Login in</button>
-<a routerLink="/signup" class="btn btn-secondary rounded-pill mt-4">Sign up</a>
+<div>
+    <button (click)="loginUser()" class="btn btn-primary rounded-pill mt-3">Login in</button>
+</div>
+<div>
+    <a routerLink="/signup" class="btn btn-secondary rounded-pill mt-4">Sign up</a>
+</div>
