@@ -8,9 +8,7 @@
         <text x="75" y="60" font-size="30" text-anchor="middle" fill="white">E</text>
     </svg>
 </div>
-<form action="" class="">
-    <input type="text" class="form-control rounded-4" placeholder="Recipient's username">
-    <input type="password" class="form-control rounded-4 mt-2" placeholder="Recipient's password">
-    <button type="submit" class="btn btn-primary rounded-pill mt-3">Login in</button>
-</form>
+<input [(ngModel)]="userEmail" type="text" class="form-control rounded-4" placeholder="User's email">
+<input [(ngModel)]="userPassword" type="password" class="form-control rounded-4 mt-2" placeholder="User's password">
+<button (click)="loginUser()" class="btn btn-primary rounded-pill mt-3">Login in</button>
 <a routerLink="/signup" class="btn btn-secondary rounded-pill mt-4">Sign up</a>
