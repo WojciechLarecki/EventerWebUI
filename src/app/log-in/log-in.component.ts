@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms'
 import { LogoComponent } from '../logo/logo.component';
 
 @Component({
-  selector: 'app-log-in',
-  standalone: true,
-  imports: [RouterLink, FormsModule, LogoComponent],
-  templateUrl: './log-in.component.html',
-  styleUrl: './log-in.component.scss'
+    selector: 'app-log-in',
+    imports: [RouterLink, FormsModule, LogoComponent],
+    templateUrl: './log-in.component.html',
+    styleUrl: './log-in.component.scss'
 })
 export class LogInComponent {
   userEmail!: string;

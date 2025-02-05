@@ -4,11 +4,10 @@ import { LogoComponent } from '../logo/logo.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-sing-up',
-  standalone: true,
-  imports: [RouterLink, LogoComponent, FormsModule],
-  templateUrl: './sing-up.component.html',
-  styleUrl: './sing-up.component.scss'
+    selector: 'app-sing-up',
+    imports: [RouterLink, LogoComponent, FormsModule],
+    templateUrl: './sing-up.component.html',
+    styleUrl: './sing-up.component.scss'
 })
 export class SingUpComponent {
   userPassword!: string;
