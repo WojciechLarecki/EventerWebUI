@@ -14,8 +14,12 @@ export class LogInComponent {
   userPassword!: string;
 
   loginUser(): void {
-    alert(
-      `UserEmail: ${this.userEmail} | UserPassword: ${this.userPassword}`
-    );
+    let isValidUser = false;
+    if (isValidUser) {
+      
+    } 
+    // alert(
+    //   `UserEmail: ${this.userEmail} | UserPassword: ${this.userPassword}`
+    // );
   }
 }

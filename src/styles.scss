@@ -1,41 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
-$primary: #f84551;
-$secondary: #0ea5b0;
-$btn-color: #fff;
+// /* You can add global styles to this file, and also import other style files */
+// $primary: #f84551;
+// $secondary: #0ea5b0;
+// $btn-color: #fff;
 
 
-// override shadow properties
-$shadowColor: #5b6e74;
-$box-shadow: -0.3rem .3rem .3rem $shadowColor;
+// // override shadow properties
+// $shadowColor: #5b6e74;
+// $box-shadow: -0.3rem .3rem .3rem $shadowColor;
 
-$border-radious: 1rem;
+// $border-radious: 1rem;
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
-.panel {
-    background: rgb(217, 219, 214);
-    background: linear-gradient(45deg, rgba(217, 219, 214, 1) 0%, rgba(239, 242, 235, 1) 100%);
-}
+// .panel {
+//     background: rgb(217, 219, 214);
+//     background: linear-gradient(45deg, rgba(217, 219, 214, 1) 0%, rgba(239, 242, 235, 1) 100%);
+// }
 
-body {
-    background-color: rgb(177, 180, 173);
-}
+// body {
+//     background-color: rgb(177, 180, 173);
+// }
 
-.btn-secondary,
-.btn-primary {
-    color: #fff;
-}
+// .btn-secondary,
+// .btn-primary {
+//     color: #fff;
+// }
 
-.dvh-100 {
-    height: 100dvh;
-}
+// .dvh-100 {
+//     height: 100dvh;
+// }
 
-.im {
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(177, 180, 173, 1) 90%),
-        url(./../public/img/obrazWejściowy.jpg);
-    background-position: center;
-    // background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    //     url(./../public/img/obrazWejściowy.jpg);
-    //background-image: rgba($color: #fff, $alpha: .5), ;
-}
+// .im {
+//     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(177, 180, 173, 1) 90%),
+//         url(./../public/img/obrazWejściowy.jpg);
+//     background-position: center;
+//     // background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+//     //     url(./../public/img/obrazWejściowy.jpg);
+//     //background-image: rgba($color: #fff, $alpha: .5), ;
+// }
