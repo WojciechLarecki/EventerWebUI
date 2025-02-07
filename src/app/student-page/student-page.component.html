@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-8 align-content-center">
+        {{this.student.Name}} {{this.student.Surname}}
+    </div>
+    <div class="col-4 center">
+        <img src="img/male.png" class="rounded im" alt="avatar">
+    </div>
+</div>
+<div class="row mt-4">
+    <div>Recent events</div>
+    <table class="table mb-2">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Event</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (item of this.student.Events; track $index; let i = $index) {
+                <tr>
+                    <td>{{i + 1}}</td>
+                    <td>{{item.name}}</td>
+                </tr>
+            } @empty {
+                <tr>
+                    <td span="2">Lack of joined events.</td>
+                </tr>
+            }
+        </tbody>
+      </table>
+      <div>
+          <button class="btn btn-primary">show more</button>
+      </div>
+</div>
+<div class="row mt-4">
+    <form>
+        <div class="col-12 mb-2">
+            <input [(ngModel)]="eventJoinCode" type="text" class="form-control" placeholder="join code" name="code">
+        </div>
+        <button class="btn btn-primary">join event</button>
+    </form>
+</div>
+<div class="row mt-4">
+    <div>
+        <button class="btn btn-danger">leave app</button>
+    </div>
+</div>
