@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms'
 import { LogoComponent } from '../logo/logo.component';
 
@@ -12,12 +12,17 @@ import { LogoComponent } from '../logo/logo.component';
 export class LogInComponent {
   userEmail!: string;
   userPassword!: string;
+  private readonly router = inject(Router);
 
   loginUser(): void {
     let isValidUser = false;
+    let userRole = 'student';
+
     if (isValidUser) {
       
-    } 
+    }
+    this.router.navigate(['/student']);
+    
     // alert(
     //   `UserEmail: ${this.userEmail} | UserPassword: ${this.userPassword}`
     // );
