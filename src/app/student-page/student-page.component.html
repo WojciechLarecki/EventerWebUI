@@ -1,10 +1,12 @@
 <div class="row">
-    <div class="col-8 align-content-center">
-        {{this.student.Name}} {{this.student.Surname}}
-    </div>
-    <div class="col-4 center">
-        <img src="img/male.png" class="rounded im" alt="avatar">
-    </div>
+    @if (user$ | async; as user) {
+        <div class="col-8 align-content-center">
+            {{user.name}} {{user.surname}}
+        </div>
+        <div class="col-4 center">
+            <img src="img/male.png" class="rounded im" alt="avatar">
+        </div>
+    }
 </div>
 <div class="row mt-4">
     <div>Recent events</div>
@@ -16,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-            @for (item of this.student.Events; track $index; let i = $index) {
+            @for (item of this.userEvents; track $index; let i = $index) {
                 <tr>
                     <td>{{i + 1}}</td>
                     <td>{{item.name}}</td>

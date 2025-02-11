@@ -1,37 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { GetUserRespDTO, UserService } from '../services/user.service';
+import { Observable } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-student-page',
-  imports: [FormsModule],
+  imports: [FormsModule, AsyncPipe],
   templateUrl: './student-page.component.html',
   styleUrl: './student-page.component.scss'
 })
+@Injectable({providedIn: 'root'})
 export class StudentPageComponent {
-  student!: Student;
   eventJoinCode!: string;
+  user$!: Observable<GetUserRespDTO>;
+  userEvents!: EventDTO[];
+  
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    // load student from api
-    this.student = new Student();
-    this.student.Name = 'Wojciech';
-    this.student.Surname = 'Larecki';
+    this.user$ = this.userService.getUser("8E728743-8AEA-43A3-9B21-6C243D74AEA2");
     let ev1 = new EventDTO();
     ev1.name = 'test1';
     
     let ev2 = new EventDTO();
     ev2.name = 'test2';
     
-    this.student.Events = [
+    this.userEvents = [
       ev1, ev2
     ]
   }
-}
-
-class Student {
-  Name!: string;
-  Surname!: string;
-  Events!: EventDTO[];
 }
 
 class EventDTO {
